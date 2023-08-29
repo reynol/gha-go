@@ -9,7 +9,7 @@ import (
 
 func main() {
     // Open the file
-    file, err := os.Open("./script1/file.csv")
+    file, err := os.Open("./pkg/script1/file.csv")
     if err != nil {
         fmt.Println("Error opening file:", err)
         return
