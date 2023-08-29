@@ -1,6 +1,6 @@
 FROM golang:1.21
 
-ENV PATH_MAIN="/cmd/fraud"
+ENV PATH_MAIN=""
 
 COPY . /home/docker/go/src
 
