@@ -20,7 +20,7 @@ func main() {
 
     // Obtener el nombre del script a ejecutar
     scriptName := args[0]
-    scriptPath := filepath.Join(".", scriptName, "script.go")
+    scriptPath := filepath.Join("./pkg/", scriptName, "script.go")
 
     // Verificar si el script existe
     if _, err := os.Stat(scriptPath); os.IsNotExist(err) {

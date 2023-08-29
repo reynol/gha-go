@@ -1,9 +1,11 @@
 FROM golang:1.21
 
-WORKDIR /app
+ENV PATH_MAIN="/cmd/fraud"
 
-COPY . .
+COPY . /home/docker/go/src
 
-RUN go build -o main .
+WORKDIR /home/docker/go/src$PATH_MAIN
 
-CMD ["./main"]
+RUN go build -v -o /home/docker/go/build .
+
+CMD ["./go/build"]
